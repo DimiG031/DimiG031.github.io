@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Goran Dimitrijevic Portfolio</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">Goran.</a>
-
+        <a href="index.html" class="logo"><span class="highlight">Goran Dimitrijevic Dimi</span></a>
         <nav class="navbar">
-            <a href="#" class="active">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header> 
 
@@ -25,25 +23,44 @@
         <div class="home-content">
             <h1>Hi, I'm Goran Dimitrijevic</h1>
             <h3>Java Developer</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum debitis nobis quis est labore in quos qui eius voluptatem doloribus. A, eveniet quidem accusantium praesentium dolores facere libero earum eaque.</p>
-        <div class="btn-box">
-            <a href="#">Hire Me</a>
-            <a href="#">Let's Talk</a>
+            <p class="typing-text" id="typing-text"></p>
+            <div class="btn-box">
+                <a href="contact.html">Hire Me</a>
+                <a href="mailto:gorandimitrijevic031@gmail.com?subject=Let's Talk&body=Hello Goran, I'd like to discuss a project with you.">Let's Talk</a>
+            </div>
         </div>
-    </div>
-    <div class="home-sci">
-        <a href="#"><i class='bx bxl-facebook'></i></a>
-        <a href="#"><i class='bx bxl-twitter'></i></a>
-        <a href="#"><i class='bx bxl-linkedin'></i></a>
-    </div>
 
-    <span class="home-imgHover"></span>
+        <div class="home-sci">
+            <a href="https://www.facebook.com/goran.dimitrijevicdimi" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://x.com/GDimiRS" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.linkedin.com/in/goran-dimitrijevic-dimi-874919138/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        </div>
+
+        <span class="home-imgHover"></span>
     </section>
-
-    
 
     <footer class="footer">
         <p>&copy; 2024 Goran Dimitrijevic. All Rights Reserved.</p>
     </footer>
 </body>
+<script>
+const text = "Hey there! I'm Goran Dimitrijević, a Certified Java Developer with a strong background in backend development, databases, and scalable software solutions.\nWhile Java is my foundation, I’m also passionate about JavaScript, React, and modern web technologies.\nI believe that a developer is truly powerful when they understand both backend and frontend, which is why I’m constantly improving my advanced JavaScript skills.\nMy goal is to build seamless, high-performance applications that deliver real value.\nCheck out my projects and feel free to reach out—let’s build something great together!";
+
+const typingSpeed = 50;
+const typingText = document.getElementById("typing-text");
+let index = 0;
+
+function typeText() {
+    if (index < text.length) {
+        typingText.innerHTML += text[index] === "\n" ? "<br>" : text[index];
+        index++;
+        setTimeout(typeText, typingSpeed);
+    } else {
+        typingText.style.borderRight = "none";
+    }
+}
+
+setTimeout(typeText, 1000);
+
+</script>
 </html>
