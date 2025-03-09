@@ -17,5 +17,5 @@ Welcome to my personal portfolio website! 🚀
 
 ---
 📫 **Contact Me:**  
-- LinkedIn: [Your Profile](https://www.linkedin.com/in/goran-dimitrijevic-dimi-874919138/)  
+- LinkedIn: [Goran Dimitrijevic](https://www.linkedin.com/in/goran-dimitrijevic-dimi-874919138/)  
 - Email: gorandimitrijevic031@gmail.com  
